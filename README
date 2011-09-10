@@ -8,3 +8,25 @@ following:
 +FormParser = XHTMLCompatibleFormParser  # testing hack
 +FormParser = RobustFormParser  # testing hack
 
+
+Usage: aws_usage.py [options] -s SERVICE DATE_FROM DATE_TO
+
+DATE_FROM and DATE_TO should be in YYYY-MM-DD format (eg. 2009-01-31)
+Username and Password can also be specified via AWS_USERNAME and AWS_PASSWORD environment variables.
+
+Available Services: AmazonS3, AmazonEC2, AmazonCloudFront, AmazonSimpleDB, AWSQueueService, IngestionService, AmazonVPC
+Available usage types: All Usage Types, APS1-EBS, BoxUsage, BoxUsage:c1.medium, BoxUsage:c1.xlarge, BoxUsage:m1.large, BoxUsage:ml.xlarge, DataTransfer-In-Bytes, DataTransfer-Out-Bytes, DataTransfer-Regional-Bytes, EBS, EU-EBS, USW1-EBS
+
+Options:
+  -h, --help            show this help message and exit
+  -s SERVICE, --service=SERVICE
+                        The AWS service to query
+  -p PERIOD, --period=PERIOD
+                        Period of report entries
+  -f FORMAT, --format=FORMAT
+                        Format of report
+  -U USERNAME, --username=USERNAME
+                        Email address for your AWS account
+  -P PASSWORD, --password=PASSWORD
+  -t USAGETYPE, --usagetype=USAGETYPE
+  -d, --debug           
