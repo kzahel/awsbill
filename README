@@ -1,0 +1,10 @@
+script found on internet to download AWS usage. extended to allow downloads by boxusage. future plans include batch downloading (without having to login multiple times)
+
+you'll get a parser error because mechanize is not detecting XHTML correctly --- modify mechanize _form.py with the 
+following:
+
+-#FormParser = XHTMLCompatibleFormParser  # testing hack
+-#FormParser = RobustFormParser  # testing hack
++FormParser = XHTMLCompatibleFormParser  # testing hack
++FormParser = RobustFormParser  # testing hack
+
